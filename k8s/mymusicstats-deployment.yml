@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mymusicstats-deployment
+  name: test-deployment
   labels:
-    app: mymusicstats
+    app: test-grid
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mymusicstats
+      app: testgrid
   template:
     metadata:
       labels:
-        app: mymusicstats
+        app: testgrid
     spec:
       containers:
-      - name: mymusicstats
+      - name: testgrid
         image: shashankssriva/mymusicstats-arm64:1.0.2
         ports:
         - containerPort: 80
