@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: nginx-deployment
   labels:
-    app: nginxdeployment
+    app: nginx
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginxdeployment
+      app: nginx
   template:
     metadata:
       labels:
-        app: nginxdeployment
+        app: nginx
     spec:
       containers:
-      - name: nginxdeployment
+      - name: nginx
         image: munagalareddy/argocddemo:1.0.0
         ports:
         - containerPort: 80
