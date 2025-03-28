@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: mymusicstats-deployment
   labels:
-    app: nginx
+    app: mymusicstats
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: mymusicstats
   template:
     metadata:
       labels:
-        app: nginx
+        app: mymusicstats
     spec:
       containers:
-      - name: nginx
+      - name: mymusicstats
         image: munagalareddy/argocddemo:1.0.0
         ports:
         - containerPort: 80
