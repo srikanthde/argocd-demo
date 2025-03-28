@@ -1,23 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test-app
-  labels:
-    app: test-app
+  name: nginx-deployment
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: test-app
+      app: nginx
   template:
     metadata:
       labels:
-        app: test-app
+        app: nginx
     spec:
-      terminationGracePeriodSeconds: 30
       containers:
-      - name: test-app
-        image: veeranarni/hotstar:latest
-        imagePullPolicy: "Always"
+      - name: nginx
+        image: nginx:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 80
