@@ -1,0 +1,14 @@
+replicaCount: 1
+
+image:
+  repository: grid-dynamics-website
+  pullPolicy: IfNotPresent
+  tag: latest
+
+service:
+  type: LoadBalancer
+  port: 80
+
+ingress:
+  enabled: false
+

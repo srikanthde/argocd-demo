@@ -1,0 +1,6 @@
+apiVersion: v2
+name: grid-dynamics-website
+description: A simple website for Grid Dynamics using NGINX.
+version: 0.1.0
+appVersion: "1.0"
+
