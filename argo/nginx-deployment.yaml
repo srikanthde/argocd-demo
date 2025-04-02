@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: mymusicstats
-        image: munagalareddy/argocddemo:1.0.0
+        image: munagalareddy/argocddemo:1.0.4
         ports:
         - containerPort: 80
