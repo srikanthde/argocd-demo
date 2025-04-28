@@ -12,20 +12,23 @@
 ## Argo CD Installation
 
 1. Install Argo CD CLI using Homebrew:
-    ```bash
+      ```bash
     brew install argocd
     ```
 
 2. install ArgoCD in k8s
-    ``` kubectl create namespace argocd
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+      ``` bash 
+    kubectl create namespace argocd
+    kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
     ```
 3. access ArgoCD UI
-```kubectl get svc -n argocd
-kubectl port-forward svc/argocd-server 8080:443 -n argocd
+      ```bash
+      kubectl get svc -n argocd
+      kubectl port-forward svc/argocd-server 8080:443 -n argocd
    ```
 4. login with admin user and below token (as in documentation):
-```kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 --decode && echo
-```
+      ```bash
+      kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 --decode && echo
+      ```
 # you can change and delete init password
 
